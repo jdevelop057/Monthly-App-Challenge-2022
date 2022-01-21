@@ -4,6 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".ui.view.splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIcon">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonParty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/orange"
+            android:background="@drawable/splash_rounded_buttons"
+            android:text="@string/start_game" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/splash_rounded_buttons"
+            android:backgroundTint="@color/white"
+            android:text="@string/info" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
