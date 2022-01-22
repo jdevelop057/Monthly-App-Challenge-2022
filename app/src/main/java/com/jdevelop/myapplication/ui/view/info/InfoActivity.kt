@@ -2,7 +2,7 @@ package com.jdevelop.myapplication.ui.view.info
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.jdevelop.myapplication.R
+import com.jdevelop.myapplication.databinding.ActivityInfoBinding
 
 class InfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInfoBinding
