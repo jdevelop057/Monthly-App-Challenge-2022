@@ -7,6 +7,6 @@ import com.jdevelop.myapplication.ui.base.BaseActivityRouter
 /**
  * Created by Jdevelop057 on 21/01/2022.
  */
-class MainRouter: BaseActivityRouter {
+class MainRouter : BaseActivityRouter {
     override fun intent(activity: Context): Intent = Intent(activity, MainActivity::class.java)
 }
