@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/replay_game"
+        android:icon="@drawable/ic_baseline_replay_24"
+        android:title="@string/replay_game"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/restart_game"
+        android:icon="@drawable/ic_baseline_restore_24"
+        android:title="@string/restart_game"
+        app:showAsAction="ifRoom" />
+</menu>
