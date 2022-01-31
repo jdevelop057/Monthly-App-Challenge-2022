@@ -2,6 +2,8 @@
 
 First App of the Monthly App Monthly Challenge 2022 organized by [Mouredev](https://github.com/mouredev)
 
+Apk file: [Connect4.apk](https://github.com/jdevelop057/Monthly-App-Challenge-2022/raw/January-Android-App/app/release/Connect4-Jdevelop057.apk)
+
 Requisitos:
 
 - ✅ Tablero de 7x6 (7 en el eje "x" y 6 en el "y").
