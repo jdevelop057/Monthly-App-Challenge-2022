@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <include
+
+        android:id="@+id/player_info"
+        layout="@layout/board_players_information" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutComponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <LinearLayout
+            android:id="@+id/game_board"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:clipChildren="false"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+            <include layout="@layout/board_row" />
+
+            <include layout="@layout/board_row" />
+
+            <include layout="@layout/board_row" />
+
+            <include layout="@layout/board_row" />
+
+            <include layout="@layout/board_row" />
+
+            <include layout="@layout/board_row" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_board_front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clipChildren="false"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+            <include layout="@layout/front_row_board" />
+
+            <include layout="@layout/front_row_board" />
+
+            <include layout="@layout/front_row_board" />
+
+            <include layout="@layout/front_row_board" />
+
+            <include layout="@layout/front_row_board" />
+
+            <include layout="@layout/front_row_board" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
