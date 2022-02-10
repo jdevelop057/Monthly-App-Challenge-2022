@@ -1,5 +1,6 @@
 package com.jdevelop.starwarsapp.data.repositories.people
 
+import com.jdevelop.starwarsapp.data.model.people.PeopleModel
 import com.jdevelop.starwarsapp.data.network.people.PeopleApiService
 
 /**
@@ -8,4 +9,6 @@ import com.jdevelop.starwarsapp.data.network.people.PeopleApiService
 class PeopleRepository {
 
     private val api = PeopleApiService()
+
+    suspend fun getAllPeople(): List<PeopleModel> = api.getPeople()
 }
