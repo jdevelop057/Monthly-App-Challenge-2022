@@ -5,4 +5,5 @@ package com.jdevelop.starwarsapp.util
  */
 object Constants {
     const val STAR_WARS_API = "https://swapi.dev/"
+    const val STAR_WARS_API_PEOPLE = STAR_WARS_API + "people/"
 }
