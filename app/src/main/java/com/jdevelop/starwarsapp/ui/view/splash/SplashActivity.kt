@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.jdevelop.starwarsapp.databinding.ActivitySplashBinding
 import com.jdevelop.starwarsapp.ui.component.progressbar.ComponentProgressBar
+import com.jdevelop.starwarsapp.ui.view.main.MainRouter
 import com.jdevelop.starwarsapp.ui.viewmodel.splash.SplashViewModel
 
 class SplashActivity : AppCompatActivity() {
@@ -23,5 +24,10 @@ class SplashActivity : AppCompatActivity() {
         componentProgressBar = binding.componentProgressBar
         componentProgressBar.setProgressBarColor(Color.CYAN)
         viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
+        viewModel.splashViewModelGetData.observe(this) {
+            MainRouter().launch(this)
+        }
+        viewModel.getData()
+
     }
 }
