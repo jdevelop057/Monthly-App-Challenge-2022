@@ -10,5 +10,5 @@ import retrofit2.http.GET
  */
 interface PeopleApiClient {
     @GET(Constants.STAR_WARS_API_PEOPLE)
-    suspend fun getAllPeople(): Response<List<PeopleModel>>
+    suspend fun getAllPeople(): Response<PeopleModel>
 }

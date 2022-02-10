@@ -10,6 +10,6 @@ class GetAllPeople {
 
     private val repository: PeopleRepository = PeopleRepository()
 
-    suspend operator fun invoke(): List<PeopleModel> =
+    suspend operator fun invoke(): PeopleModel? =
         repository.getAllPeople()
 }

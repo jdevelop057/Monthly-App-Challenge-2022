@@ -10,5 +10,5 @@ class PeopleRepository {
 
     private val api = PeopleApiService()
 
-    suspend fun getAllPeople(): List<PeopleModel> = api.getPeople()
+    suspend fun getAllPeople(): PeopleModel? = api.getPeople()
 }

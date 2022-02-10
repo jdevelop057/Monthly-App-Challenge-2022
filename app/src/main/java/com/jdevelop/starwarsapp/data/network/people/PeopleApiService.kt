@@ -13,10 +13,10 @@ class PeopleApiService {
 
     private val retrofit: Retrofit = RetrofitHelper.getRetrofit()
 
-    suspend fun getPeople(): List<PeopleModel> {
+    suspend fun getPeople(): PeopleModel? {
         return withContext(Dispatchers.IO) {
             val response = retrofit.create(PeopleApiClient::class.java).getAllPeople()
-            response.body() ?: emptyList()
+            response.body()
         }
     }
 }
