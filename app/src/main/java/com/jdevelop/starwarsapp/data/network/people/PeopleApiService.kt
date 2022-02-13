@@ -13,9 +13,9 @@ class PeopleApiService {
 
     private val retrofit: Retrofit = RetrofitHelper.getRetrofit()
 
-    suspend fun getPeople(): PeopleModel? {
+    suspend fun getPeople(page: Int): PeopleModel? {
         return withContext(Dispatchers.IO) {
-            val response = retrofit.create(PeopleApiClient::class.java).getAllPeople()
+            val response = retrofit.create(PeopleApiClient::class.java).getAllPeople(page)
             response.body()
         }
     }
