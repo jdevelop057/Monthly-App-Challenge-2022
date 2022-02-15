@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWarsAPP">
         <activity
+            android:name=".ui.view.detail.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.main.MainActivity"
             android:exported="true">
             <intent-filter>
