@@ -14,8 +14,9 @@ import com.squareup.picasso.Picasso
 /**
  * Created by Jdevelop057 on 12/02/2022.
  */
-class MainRecyclerViewAdapter() : RecyclerView.Adapter
-<MainRecyclerViewAdapter.ViewHolder>() {
+class MainRecyclerViewAdapter(private val onClickListener: (PeopleResultsModel) -> Unit) :
+    RecyclerView.Adapter
+    <MainRecyclerViewAdapter.ViewHolder>(), ClickListener {
 
     private lateinit var mainList: PeopleModel
 
@@ -25,7 +26,7 @@ class MainRecyclerViewAdapter() : RecyclerView.Adapter
         private val textViewCardView: TextView = view.findViewById(R.id.textViewCardView)
 
 
-        fun render(item: PeopleResultsModel) {
+        fun render(item: PeopleResultsModel, onClickListener: (PeopleResultsModel) -> Unit) {
             val list = item.url.split("/")
             val id = list[list.size - 1].ifEmpty { list[list.size - 2] }
             Picasso.get()
@@ -35,6 +36,8 @@ class MainRecyclerViewAdapter() : RecyclerView.Adapter
                 .into(imageViewCardView)
 
             textViewCardView.text = item.name
+
+            itemView.setOnClickListener { onClickListener(item) }
         }
 
     }
@@ -57,9 +60,16 @@ class MainRecyclerViewAdapter() : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mainList.results[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     override fun getItemCount(): Int = mainList.results.size
+    override fun onItemClick(position: Int, v: View?) {
+        TODO("Not yet implemented")
+    }
 
+}
+
+interface ClickListener {
+    fun onItemClick(position: Int, v: View?)
 }
