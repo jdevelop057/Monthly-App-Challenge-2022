@@ -1,4 +1,4 @@
-package com.jdevelop.starwarsapp.ui.viewmodel.splash
+package com.jdevelop.starwarsapp.ui.viewmodel.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,7 +8,7 @@ import com.jdevelop.starwarsapp.domain.usecases.people.GetAllPeople
 /**
  * Created by Jdevelop057 on 08/02/2022.
  */
-class SplashViewModel : ViewModel() {
+class MainViewModel : ViewModel() {
     var splashViewModelGetData = MutableLiveData<PeopleModel>()
     val getAllPeople: GetAllPeople = GetAllPeople()
 
