@@ -59,4 +59,7 @@ dependencies {
 
 //    Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+//    Shared Preferences
+    implementation 'androidx.preference:preference-ktx:1.2.0'
 }
